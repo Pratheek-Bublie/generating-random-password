@@ -1,0 +1,14 @@
+var keylist = "abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*"
+var temp ='';
+function generatepass(plength){
+    temp =''
+    for(i=0;i<plength;i++){
+        temp += keylist.charAt(Math.floor(Math.random()*keylist.length))
+        
+    }
+    return temp
+}
+
+function populateForm(enterlength){
+    document.passGen.output.value = generatepass(enterlength)
+}
